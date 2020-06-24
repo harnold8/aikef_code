@@ -1,0 +1,26 @@
+#PBS -q atlas-simon
+#PBS -l nodes=2:ppn=24
+#PBS -l pmem=10gb
+#PBS -l walltime=10:00:00
+#PBS -m ea
+#PBS -M harnold8@gatech.edu
+#PBS -j oe
+#PBS -N peter_test
+
+NCORES=`cat $PBS_NODEFILE | wc -l`
+NNODES=`uniq $PBS_NODEFILE | wc -l`
+###cd $PBS_O_WORKDIR
+cd ~/scratch/peter/bin
+cat $PBS_NODEFILE
+
+
+# module load tac/7.2.2
+# module load use.own
+# module load ddt
+
+module purge
+#module load gcc/4.9.0 mvapich2/2.1
+#module load impi/5.0.1.035
+module load impi/5.1.1.109
+
+mpirun -rmk pbs ./aikef_mpi

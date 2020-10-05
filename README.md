@@ -112,4 +112,4 @@ Now you want to look at this output.
 Start VisIt
 Load the 2d or 3d output of your simulation.
 
-Documentation mostly taken from Hendrik Kriegel
+Documentation mostly adapted from Hendrik Kriegel

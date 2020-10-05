@@ -1,8 +1,8 @@
 # Adaptive Ion-Kinetic Electron-Fluid (AIKEF)
 
 AIKEF is a plasma simulation code for space physics with two main fields of application:
--The interaction between a planetary obstacle and the impinging plasma flow. 
--Plasma turbulence.
+* The interaction between a planetary obstacle and the impinging plasma flow. 
+* Plasma turbulence.
 	
 
 ## Required Software
@@ -15,8 +15,8 @@ gcc (standard compiler for all linux distributions; easiest compiler to install,
 
 ## Getting Started:
 Before you start you should make sure you are using a 64-bit linux system (you can type "uname -m" into a terminal, the output should be \textit{x86\_64}).
-*Makefile for compilation already included in 
-*job file for cluster submission in the bin folder
+* Makefile (to compile the code) already included in the root folder
+* job file for cluster submission in the bin folder
 
  
 

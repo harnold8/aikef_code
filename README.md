@@ -1,26 +1,26 @@
-#Adaptive Ion-Kinetic Electron-Fluid (AIKEF)
+# Adaptive Ion-Kinetic Electron-Fluid (AIKEF)
 
 AIKEF is a plasma simulation code for space physics with two main fields of application:
 -The interaction between a planetary obstacle and the impinging plasma flow. 
 -Plasma turbulence.
 	
 
-##Required Software
-*c++ compiler:
+## Required Software
+* c++ compiler:
 gcc (standard compiler for all linux distributions; easiest compiler to install, already installed on most systems)
-*openmpi
-*libraries (should already be included for 64-bit systems): libsiloh5, libhdf5, libsz, libz, libgsl
-*Visualization tool: VisIt https://wci.llnl.gov/simulation/computer-codes/visit/
+* openmpi
+* libraries (should already be included for 64-bit systems): libsiloh5, libhdf5, libsz, libz, libgsl
+* Visualization tool: VisIt https://wci.llnl.gov/simulation/computer-codes/visit/
 
 
-##Getting Started:
+## Getting Started:
 Before you start you should make sure you are using a 64-bit linux system (you can type "uname -m" into a terminal, the output should be \textit{x86\_64}).
 *Makefile for compilation already included in 
 *job file for cluster submission in the bin folder
 
  
 
-##Some Basic Parameters:
+## Some Basic Parameters:
 There are two files which are modified by every user:
 defines.h : general switches that decide if you want to include neutral species, ion production fields, dust, a dipole field ... and which terms of the field equation should be calculated
 parameters.cpp : nearly all parameters of your simulation... Most important aspects are:
@@ -105,7 +105,7 @@ Set box size and resolution:
 		
 	For anything related to ion production from an atmosphere or related to any kind of ion-neutral interactions, the reader is referred to the AIKEF\_IonNeutral\_Guide
 
-##Output and Visualization:
+## Output and Visualization:
 The logfile tells you that the simulation runs and has generated the first output (or it is crashed and you need the output to understand why). The usual output is writing the fields and plasma moments in the silo file format which can be opened by VisIt. This could be done either in 2D (three predefined cross-sections, SILO\_2D) or in 3D (whole simulation box, SILO\_3D).
 
 Now you want to look at this output.
